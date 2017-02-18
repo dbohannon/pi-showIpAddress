@@ -92,16 +92,17 @@ def main():
 		lcd_init()
 
 		# Initial greeting
-		lcd_string("Hello David!",LCD_LINE_1)
+		lcd_string("Hello there!",LCD_LINE_1)
 		lcd_string("My name is pi.",LCD_LINE_2)
 
 		#Turn on led 17
 		GPIO.output(17, GPIO.HIGH)
 
-		lcd_string("Hello David!",LCD_LINE_1)
+		lcd_string("Hello there!",LCD_LINE_1)
 		lcd_string("My name is pi.",LCD_LINE_2)
 		time.sleep(2)
 
+		#update the network interface(s) if different than eth0 and wlan0
 		lcd_string("eth0 IP: ", LCD_LINE_1)
 		lcd_string(get_ip('eth0'), LCD_LINE_2)
 		time.sleep(2)
